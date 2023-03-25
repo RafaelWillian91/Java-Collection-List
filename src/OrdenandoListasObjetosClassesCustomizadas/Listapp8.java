@@ -39,6 +39,6 @@ public class Listapp8 {
         }
 
         //Outra forma que funciona
-        listPeoples.sort((new PersonNameimpl());
+        listPeoples.sort(new PersonNameimpl());
     }
 }

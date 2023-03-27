@@ -8,12 +8,8 @@ import java.util.List;
 public class Employee {
 
     public enum Status{
-        ACTIVE(1), INACTIVE(0);
+        ACTIVE, INACTIVE;
 
-        private int opcao;
-        Status(int y){
-            opcao = y;
-        }
     }
     private String name;
     private Status status;
@@ -40,7 +36,11 @@ public class Employee {
     }
 
     public static List<Employee> removeEmployee(List<Employee> list, Status s){
-        List<Employee> listActive = list;
+        //Criada uma nova lista para não alterar a lista original
+        //List<Employee> listActive = list;//Dessa forma ao alterar a listActive ela altera a list original.
+        //Para isso nao acontecer, populamos a lista de outra forma
+        var listActive = new ArrayList<Employee>();
+        listActive.addAll(list);
 
         Iterator iterator = listActive.iterator();
 

@@ -24,8 +24,8 @@ public class Listaexercise02 {
         }
 
         System.out.println("-------------------------------------------------");
-        Employee.removeEmployee(listEmployee, INACTIVE);
-        for (Employee e : listEmployee) {
+        var listResult =  Employee.removeEmployee(listEmployee, ACTIVE);
+        for (Employee e : listResult) {
             System.out.println(e);
         }
 
